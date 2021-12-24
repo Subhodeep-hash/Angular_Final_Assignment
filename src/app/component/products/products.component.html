@@ -30,6 +30,7 @@
                 <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><strong>{{item.title}}</strong></h3>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
                 <p><strong>Price:</strong> INR{{item.price}}</p>
+                <img src="{{item.image}}" alt="">
                 <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button><p></p>
                 <button class="btn btn-primary" (click)=addtoWishList(item)>Add to WishList</button>
             </div>
