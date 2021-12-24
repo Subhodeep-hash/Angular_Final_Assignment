@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar navbar-brand bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 30px;">&nbsp;</i>
+            <strong style="font-size: 30px;"><i class="fab fa-leanpub"></i>#In Course Cart</strong>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+        </div>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItemCart}}</div>
+        </button>
+
+        <button routerLink="wishlist" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fab fa-wikipedia-w"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItemWishlist}}</div>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,39 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <h3>All Courses</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <h3>Technical</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+               <h3>Business</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+               <h3>MCD</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><strong>{{item.title}}</strong></h3>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> INR{{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button><p></p>
+                <button class="btn btn-primary" (click)=addtoWishList(item)>Add to WishList</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
